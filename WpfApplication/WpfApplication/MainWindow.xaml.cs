@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
-using mshtml;
+using MSHTML;
 using SHDocVw;
 
 
@@ -39,11 +39,11 @@ namespace WpfApplication
             {
                 if (Browser.LocationURL.Contains("www.baidu.com"))
                 {
-                    mshtml.IHTMLDocument2 doc2 = (mshtml.IHTMLDocument2)Browser.Document;
-                    mshtml.IHTMLElementCollection inputs = (mshtml.IHTMLElementCollection)doc2.all.tags("INPUT");
-                    mshtml.HTMLInputElement input1 = (mshtml.HTMLInputElement)inputs.item("kw", 0);
+                    MSHTML.IHTMLDocument2 doc2 = (MSHTML.IHTMLDocument2)Browser.Document;
+                    MSHTML.IHTMLElementCollection inputs = (MSHTML.IHTMLElementCollection)doc2.all.tags("INPUT");
+                    MSHTML.HTMLInputElement input1 = (MSHTML.HTMLInputElement)inputs.item("kw", 0);
                     input1.value = "刘德华";
-                    mshtml.IHTMLElement element2 = (mshtml.IHTMLElement)inputs.item("su", 0);
+                    MSHTML.IHTMLElement element2 = (MSHTML.IHTMLElement)inputs.item("su", 0);
                     element2.click();
                 }
             }
