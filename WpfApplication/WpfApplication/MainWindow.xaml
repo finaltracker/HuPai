@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="464.367" Width="525">
     <Grid>
-        <Button x:Name="contentBtn" Content="Set Content" Click="ContentClick" HorizontalAlignment="Left" Margin="200,200,0,0" VerticalAlignment="Top" Height="64" Width="100"/>
+        <Button x:Name="button" Content="打开正式国拍" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Width="150" Height="35" Click="button_Click"/>
+        <Button x:Name="button1" Content="打开模拟网站" HorizontalAlignment="Left" Margin="293,10,0,0" VerticalAlignment="Top" Width="147" Height="35" Click="button1_Click"/>
+        <Label x:Name="label" Content="本机时间：" HorizontalAlignment="Left" Margin="83,66,0,0" VerticalAlignment="Top" Width="123"/>
+        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="211,66,0,0" VerticalAlignment="Top" Width="128"/>
+        <Button x:Name="buttonPlus" Content="+" HorizontalAlignment="Left" Margin="344,66,0,0" VerticalAlignment="Top" Width="32" Height="25"/>
+        <Button x:Name="buttonMinus" Content="-" HorizontalAlignment="Left" Margin="381,66,0,0" VerticalAlignment="Top" Width="32" Height="25"/>
+        <Label x:Name="label2" Content="倒计时：" HorizontalAlignment="Left" Margin="83,96,0,0" VerticalAlignment="Top" Width="56"/>
+        <Label x:Name="label3" Content="Label" HorizontalAlignment="Left" Margin="170,96,0,0" VerticalAlignment="Top" Width="130"/>
+        <GroupBox Header="价格显示" HorizontalAlignment="Left" Height="81" Margin="83,126,0,0" VerticalAlignment="Top" Width="330">
+            <DockPanel>
+                <RadioButton x:Name="radioButton" Content="打开" HorizontalAlignment="Left" Margin="47,24,0,0" VerticalAlignment="Top" Height="24" Width="99"/>
+                <RadioButton x:Name="radioButton2" Content="关闭" HorizontalAlignment="Left" Margin="60,24,0,0" VerticalAlignment="Top" Height="24" Width="99"/>
+            </DockPanel>
+        </GroupBox>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="83,212,0,141" Width="323">
+            <StackPanel>
+                <DockPanel>
+                    <Label x:Name="label4" Content="最低成交价：" HorizontalAlignment="Left" Margin="19,9,0,0" VerticalAlignment="Top" Height="24" Width="74" RenderTransformOrigin="0.327,0.083"/>
+                    <TextBox x:Name="textBox" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="122" Margin="0,10,0,0"/>
+                </DockPanel>
+                <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TextBlock" Height="25" Margin="24,10,55,0" RenderTransformOrigin="0.499,0.927"/>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
