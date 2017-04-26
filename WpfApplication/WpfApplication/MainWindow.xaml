@@ -3,32 +3,92 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:local="clr-namespace:WpfApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="464.367" Width="525">
+        Title="MainWindow" Height="800" Width="400">
     <Grid>
-        <Button x:Name="button" Content="打开正式国拍" HorizontalAlignment="Left" Margin="83,10,0,0" VerticalAlignment="Top" Width="150" Height="35" Click="button_Click"/>
-        <Button x:Name="button1" Content="打开模拟网站" HorizontalAlignment="Left" Margin="293,10,0,0" VerticalAlignment="Top" Width="147" Height="35" Click="button1_Click"/>
-        <Label x:Name="label" Content="本机时间：" HorizontalAlignment="Left" Margin="83,66,0,0" VerticalAlignment="Top" Width="123"/>
-        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="211,66,0,0" VerticalAlignment="Top" Width="128"/>
-        <Button x:Name="buttonPlus" Content="+" HorizontalAlignment="Left" Margin="344,66,0,0" VerticalAlignment="Top" Width="32" Height="25"/>
-        <Button x:Name="buttonMinus" Content="-" HorizontalAlignment="Left" Margin="381,66,0,0" VerticalAlignment="Top" Width="32" Height="25"/>
-        <Label x:Name="label2" Content="倒计时：" HorizontalAlignment="Left" Margin="83,96,0,0" VerticalAlignment="Top" Width="56"/>
-        <Label x:Name="label3" Content="Label" HorizontalAlignment="Left" Margin="170,96,0,0" VerticalAlignment="Top" Width="130"/>
-        <GroupBox Header="价格显示" HorizontalAlignment="Left" Height="81" Margin="83,126,0,0" VerticalAlignment="Top" Width="330">
+        <Button x:Name="button" Content="打开正式国拍" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="150" Height="35" Click="button_Click"/>
+        <Button x:Name="button1" Content="打开模拟网站" HorizontalAlignment="Left" Margin="211,10,0,0" VerticalAlignment="Top" Width="147" Height="35" Click="button1_Click"/>
+        <Label x:Name="label" Content="本机时间：" HorizontalAlignment="Left" Margin="40,65,0,0" VerticalAlignment="Top" Width="115"/>
+        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="172,65,0,0" VerticalAlignment="Top" Width="128"/>
+        <Button x:Name="buttonPlus" Content="+" HorizontalAlignment="Left" Margin="305,65,0,0" VerticalAlignment="Top" Width="32" Height="25"/>
+        <Button x:Name="buttonMinus" Content="-" HorizontalAlignment="Left" Margin="342,64,0,0" VerticalAlignment="Top" Width="32" Height="25"/>
+        <Label x:Name="label2" Content="倒计时：" HorizontalAlignment="Left" Margin="40,91,0,0" VerticalAlignment="Top" Width="56"/>
+        <Label x:Name="label3" Content="Label" HorizontalAlignment="Left" Margin="158,91,0,0" VerticalAlignment="Top" Width="130"/>
+        <GroupBox Header="价格显示" HorizontalAlignment="Left" Height="81" Margin="40,122,0,0" VerticalAlignment="Top" Width="330">
             <DockPanel>
                 <RadioButton x:Name="radioButton" Content="打开" HorizontalAlignment="Left" Margin="47,24,0,0" VerticalAlignment="Top" Height="24" Width="99"/>
                 <RadioButton x:Name="radioButton2" Content="关闭" HorizontalAlignment="Left" Margin="60,24,0,0" VerticalAlignment="Top" Height="24" Width="99"/>
             </DockPanel>
         </GroupBox>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="83,212,0,141" Width="323">
-            <StackPanel>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="40,220,0,459.4" Width="330">
+            <StackPanel Margin="0.2,0.2,-0.2,0">
                 <DockPanel>
                     <Label x:Name="label4" Content="最低成交价：" HorizontalAlignment="Left" Margin="19,9,0,0" VerticalAlignment="Top" Height="24" Width="74" RenderTransformOrigin="0.327,0.083"/>
                     <TextBox x:Name="textBox" Height="23" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="122" Margin="0,10,0,0"/>
                 </DockPanel>
-                <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TextBlock" Height="25" Margin="24,10,55,0" RenderTransformOrigin="0.499,0.927"/>
+                <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TextBlock" Height="41" Margin="24,10,54,0" RenderTransformOrigin="0.499,0.927"/>
             </StackPanel>
         </Border>
+        <GroupBox x:Name="groupBox" Header="策略设定" HorizontalAlignment="Left" Margin="40,326,0,0" VerticalAlignment="Top" Height="229" Width="330">
+            <StackPanel Margin="0,0,-0.2,2">
+                <DockPanel>
+                    <Label x:Name="label5" Content="加价幅度："/>
+                    <xctk:IntegerUpDown Value="700" Increment="1" Maximum="10" Minimum="0" Width="102" />
+                    <Label x:Name="label6" Content="补抢" Width="103"/>
+                </DockPanel>
+
+                <DockPanel>
+                    <Label x:Name="label7" Content="网络激活时间："/>
+                    <xctk:IntegerUpDown Value="300" Increment="1" Maximum="10" Minimum="0" Width="102" />
+                </DockPanel>
+
+                <DockPanel>
+                    <xctk:IntegerUpDown Value="11" Increment="1" Maximum="10" Minimum="0" Width="50" />
+                    <Label x:Name="label8" Content="时"/>
+                    <xctk:IntegerUpDown Value="29" Increment="1" Maximum="10" Minimum="0" Width="63" />
+                    <Label x:Name="label9" Content="分"/>
+                    <xctk:IntegerUpDown Value="5" Increment="1" Maximum="10" Minimum="0" Width="72" />
+                    <Label x:Name="labe20" Content="秒"/>
+                </DockPanel>
+                <DockPanel>
+                    <Label x:Name="labe21" Content="第二次出价时间："/>
+                </DockPanel>
+                <DockPanel>
+                    <xctk:IntegerUpDown Value="11" Increment="1" Maximum="10" Minimum="0" Width="50" />
+                    <Label x:Name="labe22" Content="时"/>
+                    <xctk:IntegerUpDown Value="29" Increment="1" Maximum="10" Minimum="0" Width="63" />
+                    <Label x:Name="labe23" Content="分"/>
+                    <xctk:IntegerUpDown Value="5" Increment="1" Maximum="10" Minimum="0" Width="72" />
+                    <Label x:Name="labe24" Content="秒"/>
+                </DockPanel>
+                <DockPanel>
+                    <Label x:Name="labe25" Content="强制提交时间："/>
+                </DockPanel>
+                <DockPanel>
+                    <xctk:IntegerUpDown Value="11" Increment="1" Maximum="10" Minimum="0" Width="50" />
+                    <Label x:Name="labe26" Content="时"/>
+                    <xctk:IntegerUpDown Value="29" Increment="1" Maximum="10" Minimum="0" Width="63" />
+                    <Label x:Name="labe27" Content="分"/>
+                    <xctk:IntegerUpDown Value="5" Increment="1" Maximum="10" Minimum="0" Width="72" />
+                    <Label x:Name="labe28" Content="秒"/>
+                </DockPanel>
+                <DockPanel>
+                    <CheckBox />
+                    <Label x:Name="labe29" Content="提前100"/>
+                    <Label x:Name="labe30" Content="延时："/>
+                    <xctk:IntegerUpDown Value="0" Increment="1" Maximum="10" Minimum="0" Width="72" />
+                </DockPanel>
+            </StackPanel>
+        </GroupBox>
+        <CheckBox x:Name="checkBox" Content="二伏出价" HorizontalAlignment="Left" Margin="51,570,0,0" VerticalAlignment="Top" Width="74" Height="26"/>
+        <Label x:Name="label10" Content="加价：" HorizontalAlignment="Left" Margin="172,570,0,0" VerticalAlignment="Top"/>
+        <xctk:IntegerUpDown Value="0"  Increment="1" Maximum="10" Minimum="0" HorizontalAlignment="Left" Margin="232,570,0,0" VerticalAlignment="Top" Width="68" Height="21"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="117,601,0,0" TextWrapping="Wrap" Text="同步网页时间" VerticalAlignment="Top" Width="132" Height="35"/>
+        <Label x:Name="label11" Content="未启动自动出价" HorizontalAlignment="Left" Margin="117,641,0,0" VerticalAlignment="Top" Width="112"/>
+        <Button x:Name="button2" Content="启动辅助" HorizontalAlignment="Left" Margin="61,672,0,0" VerticalAlignment="Top" Width="94" Height="33"/>
+        <Button x:Name="button3" Content="关闭辅助" HorizontalAlignment="Left" Margin="232,672,0,0" VerticalAlignment="Top" Width="92" Height="33"/>
+        <Label x:Name="label12" Content="|：刷新验证码，输完验证码按回车" HorizontalAlignment="Left" Margin="61,727,0,0" VerticalAlignment="Top" Width="263"/>
     </Grid>
 </Window>

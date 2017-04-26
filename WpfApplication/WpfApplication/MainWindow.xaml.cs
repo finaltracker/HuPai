@@ -58,5 +58,10 @@ namespace WpfApplication
         {
 
         }
+
+        private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
